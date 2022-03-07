@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import static com.ouch.CommandsHandler.greeting;
 import static com.ouch.CommandsHandler.printEnvironmentVariables;
-import static com.ouch.CommandsHandler.printRevertedWord;
+import static com.ouch.CommandsHandler.printReversedWord;
 import static com.ouch.CommandsHandler.printSupportedCommands;
 import static com.ouch.CommandsHandler.printWordWithSpacesBetweenSymbols;
 import static com.ouch.Constants.INCORRECT_CODE_MESSAGE;
@@ -31,7 +31,7 @@ public class Main {
                     printWordWithSpacesBetweenSymbols();
                     break;
                 case 5:
-                    printRevertedWord();
+                    printReversedWord();
                     break;
                 case 6:
                     System.out.println("Exit...");

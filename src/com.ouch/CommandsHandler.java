@@ -19,8 +19,12 @@ public class CommandsHandler {
         System.getenv().entrySet().forEach(System.out::println);
     }
 
+    /**
+     * Requests one word from console input, separates all characters of the entered word with escape characters
+     * and prints the result in the console output.
+     */
     public static void printWordWithSpacesBetweenSymbols() {
-        System.out.println("Please enter a word:");
+        System.out.println("Please enter one word:");
         Scanner wordScanner = new Scanner(System.in);
         String s = wordScanner.next()
                 .codePoints()
@@ -30,7 +34,11 @@ public class CommandsHandler {
         wordScanner.close();
     }
 
-    public static void printRevertedWord() {
+    /**
+     * Requests one word from console input, reverts it
+     * and print the result in the console output.
+     */
+    public static void printReversedWord() {
 
     }
 }
