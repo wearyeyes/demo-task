@@ -31,7 +31,6 @@ public class CommandsHandler {
                 .mapToObj(Character::toString)
                 .collect(Collectors.joining(" "));
         System.out.println(s);
-        wordScanner.close();
     }
 
     /**
@@ -39,6 +38,10 @@ public class CommandsHandler {
      * and print the result in the console output.
      */
     public static void printReversedWord() {
-
+        System.out.println("Please enter one word:");
+        Scanner wordScanner = new Scanner(System.in);
+        String enteredWord = wordScanner.next();
+        String reversedWord = new StringBuilder(enteredWord).reverse().toString();
+        System.out.println(reversedWord);
     }
 }
