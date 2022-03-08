@@ -2,36 +2,36 @@ package com.ouch;
 
 import java.util.Scanner;
 
-import static com.ouch.CommandsHandler.greeting;
-import static com.ouch.CommandsHandler.printEnvironmentVariables;
-import static com.ouch.CommandsHandler.printReversedWord;
-import static com.ouch.CommandsHandler.printSupportedCommands;
-import static com.ouch.CommandsHandler.printWordWithSpacesBetweenSymbols;
 import static com.ouch.Constants.INCORRECT_CODE_MESSAGE;
 
 public class Main {
+    private static final CommandsHandler commandsHandler = new CommandsHandler();
 
     public static void main(String[] args) {
-        greeting();
-        printSupportedCommands();
+        commandsHandler.greeting();
+        commandsHandler.printSupportedCommands();
+        processCommands();
+    }
+
+    private static void processCommands() {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNextInt()) {
             int n = scanner.nextInt();
             switch (n) {
                 case 1:
-                    greeting();
+                    commandsHandler.greeting();
                     break;
                 case 2:
-                    printEnvironmentVariables();
+                    commandsHandler.printEnvironmentVariables();
                     break;
                 case 3:
-                    printSupportedCommands();
+                    commandsHandler.printSupportedCommands();
                     break;
                 case 4:
-                    printWordWithSpacesBetweenSymbols();
+                    commandsHandler.printWordWithSpacesBetweenSymbols();
                     break;
                 case 5:
-                    printReversedWord();
+                    commandsHandler.printReversedWord();
                     break;
                 case 6:
                     System.out.println("Exit...");
@@ -41,7 +41,6 @@ public class Main {
                     System.out.println(INCORRECT_CODE_MESSAGE);
             }
         }
-
     }
 
 }

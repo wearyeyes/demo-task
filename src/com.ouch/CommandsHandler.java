@@ -7,15 +7,15 @@ import static com.ouch.Constants.COMMAND_CODES;
 
 public class CommandsHandler {
 
-    public static void greeting() {
+    public void greeting() {
         System.out.println("Hello! Welcome to the program!");
     }
 
-    public static void printSupportedCommands() {
+    public void printSupportedCommands() {
         System.out.println(COMMAND_CODES);
     }
 
-    public static void printEnvironmentVariables() {
+    public void printEnvironmentVariables() {
         System.getenv().entrySet().forEach(System.out::println);
     }
 
@@ -23,7 +23,7 @@ public class CommandsHandler {
      * Requests one word from console input, separates all characters of the entered word with escape characters
      * and prints the result in the console output.
      */
-    public static void printWordWithSpacesBetweenSymbols() {
+    public void printWordWithSpacesBetweenSymbols() {
         System.out.println("Please enter one word:");
         Scanner wordScanner = new Scanner(System.in);
         String s = wordScanner.next()
@@ -34,10 +34,10 @@ public class CommandsHandler {
     }
 
     /**
-     * Requests one word from console input, reverts it
+     * Requests one word from console input, reverses it
      * and print the result in the console output.
      */
-    public static void printReversedWord() {
+    public void printReversedWord() {
         System.out.println("Please enter one word:");
         Scanner wordScanner = new Scanner(System.in);
         String enteredWord = wordScanner.next();
