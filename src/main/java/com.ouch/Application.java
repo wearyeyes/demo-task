@@ -2,6 +2,7 @@ package com.ouch;
 
 import java.util.Scanner;
 
+import static com.ouch.Constants.EXIT_MESSAGE;
 import static com.ouch.Constants.INCORRECT_CODE_MESSAGE;
 
 public class Application {
@@ -34,7 +35,7 @@ public class Application {
                     commandsHandler.printReversedWord();
                     break;
                 case 6:
-                    System.out.println("Exit...");
+                    System.out.println(EXIT_MESSAGE);
                     System.exit(0);
                     break;
                 default:

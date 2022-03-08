@@ -1,6 +1,12 @@
 package com.ouch;
 
 public final class Constants {
+    public static final String GREETING_MESSAGE = "Hello! Welcome to the program!";
+
+    public static final String ENTER_WORD_MESSAGE = "Please enter one word:";
+
+    public static final String EXIT_MESSAGE = "Exit...";
+
     public static final String COMMAND_CODES = "Supported commands: \n" +
             "1 - Greeting\n" +
             "2 - Print System variables\n" +
