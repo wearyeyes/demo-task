@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import static com.ouch.Constants.INCORRECT_CODE_MESSAGE;
 
-public class Main {
+public class Application {
     private static final CommandsHandler commandsHandler = new CommandsHandler();
 
     public static void main(String[] args) {
