@@ -7,7 +7,7 @@ public final class Constants {
 
     public static final String EXIT_MESSAGE = "Exit...";
 
-    public static final String COMMAND_CODES = "Supported commands: \n" +
+    public static final String COMMAND_CODES_MESSAGE = "Supported commands: \n" +
             "1 - Greeting\n" +
             "2 - Print System variables\n" +
             "3 - Print supported commands\n" +
