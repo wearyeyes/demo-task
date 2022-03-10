@@ -38,7 +38,6 @@ public class CommandsHandler {
                 case 6:
                     System.out.println(EXIT_MESSAGE);
                     System.exit(0);
-                    break;
                 default:
                     System.out.println(INCORRECT_CODE_MESSAGE);
             }
