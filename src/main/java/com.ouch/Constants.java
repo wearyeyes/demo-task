@@ -17,4 +17,7 @@ public final class Constants {
 
     public static final String INCORRECT_CODE_MESSAGE = "This number is not supported! " +
             "Try again or enter code #3 to get codes description.";
+    
+    public static final String INVALID_INPUT_MESSAGE = "Invalid input. Please enter an integer from 1 to 6 " +
+            "or enter code #3 for help!";
 }
