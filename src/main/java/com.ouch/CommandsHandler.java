@@ -21,29 +21,8 @@ public class CommandsHandler {
         while (scanner.hasNext()) {
             String input = scanner.next();
             if (input.matches("\\d+")) {
-                int n = Integer.parseInt(input);
-                switch (n) {
-                    case 1:
-                        greeting();
-                        break;
-                    case 2:
-                        printEnvironmentVariables();
-                        break;
-                    case 3:
-                        printSupportedCommands();
-                        break;
-                    case 4:
-                        printWordWithSpacesBetweenSymbols();
-                        break;
-                    case 5:
-                        printReversedWord();
-                        break;
-                    case 6:
-                        System.out.println(EXIT_MESSAGE);
-                        System.exit(0);
-                    default:
-                        System.out.println(INCORRECT_CODE_MESSAGE);
-                }
+                int commandCode = Integer.parseInt(input);
+                processCommand(commandCode);
             } else {
                 System.out.println(INVALID_INPUT_MESSAGE);
             }
@@ -87,4 +66,29 @@ public class CommandsHandler {
         String reversedWord = new StringBuilder(enteredWord).reverse().toString();
         System.out.println(reversedWord);
     }
+    
+    private void processCommand(int commandCode) {
+        switch (commandCode) {
+            case 1:
+                greeting();
+                break;
+            case 2:
+                printEnvironmentVariables();
+                break;
+            case 3:
+                printSupportedCommands();
+                break;
+            case 4:
+                printWordWithSpacesBetweenSymbols();
+                break;
+            case 5:
+                printReversedWord();
+                break;
+            case 6:
+                System.out.println(EXIT_MESSAGE);
+                System.exit(0);
+            default:
+                System.out.println(INCORRECT_CODE_MESSAGE);
+        }
+    } 
 }
